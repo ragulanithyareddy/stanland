@@ -1,0 +1,25 @@
+{
+	"events": [
+		{
+			"character": "character-1672426307.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Uncle, I'm a 4th year"
+		},
+		{
+			"character": "character-1672426258.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "JAAKE MENTOR PERMISSION LEKEY AVO"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1672426292.json",
+		"name": "timeline-1"
+	}
+}

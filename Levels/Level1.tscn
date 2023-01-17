@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=2]
+[gd_scene load_steps=105 format=2]
 
 [ext_resource path="res://Assets/all tiles 2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/shadows.png" type="Texture" id=2]
@@ -31,10 +31,12 @@
 [ext_resource path="res://Characters/NPC3.tscn" type="PackedScene" id=29]
 [ext_resource path="res://Characters/Cat.tscn" type="PackedScene" id=30]
 [ext_resource path="res://Assets/rekulu and triangle shadow.png" type="Texture" id=31]
-[ext_resource path="res://Assets/Music/1.wav" type="AudioStream" id=32]
+[ext_resource path="res://Music/1.wav" type="AudioStream" id=32]
 [ext_resource path="res://Assets/cars/cars.png" type="Texture" id=33]
 [ext_resource path="res://Assets/e block (1) (1).png" type="Texture" id=34]
 [ext_resource path="res://Levels/Area2D.gd" type="Script" id=35]
+[ext_resource path="res://Assets/cat walkcycle (1).png" type="Texture" id=36]
+[ext_resource path="res://Assets/auto and scooty.png" type="Texture" id=37]
 
 [sub_resource type="TileSet" id=1]
 0/name = "all tiles 2.png 0"
@@ -1196,6 +1198,9 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 62, 0, 62 )
 [sub_resource type="ConvexPolygonShape2D" id=46]
 points = PoolVector2Array( 0, 0, 33, 0, 33, 59, 0, 59 )
 
+[sub_resource type="ConvexPolygonShape2D" id=59]
+points = PoolVector2Array( 16.3256, 0.720139, 20.0642, 5.23756, 24.8932, 7.96358, 25.1268, 11.079, 27.3076, 14.0387, 24.5816, 16.609, 25.0489, 30.7843, 7.36869, 30.6286, 5.10999, 14.2724, 6.66772, 8.89822, 14.5343, 2.04421, 15.1573, 1.499 )
+
 [sub_resource type="ConvexPolygonShape2D" id=47]
 points = PoolVector2Array( 0, 0, 28, 0, 28, 49, 0, 49 )
 
@@ -1207,6 +1212,18 @@ points = PoolVector2Array( 0, 0, 30, 0, 30, 52, 0, 52 )
 
 [sub_resource type="ConvexPolygonShape2D" id=50]
 points = PoolVector2Array( 0, 0, 19, 0, 19, 38, 0, 38 )
+
+[sub_resource type="ConvexPolygonShape2D" id=60]
+points = PoolVector2Array( 7.21292, 7.99179, 12.8207, 5.81096, 16.4035, 0.90411, 19.519, 6.12251, 25.0489, 9.00431, 19.1296, 10.562, 20.8431, 21.4662, 18.9738, 28.8654, 15.5468, 31.5135, 12.5092, 27.9307, 12.2755, 10.9515, 11.8861, 9.54952 )
+
+[sub_resource type="ConvexPolygonShape2D" id=61]
+points = PoolVector2Array( 6.44542, 8.53699, 13.6889, 5.73307, 16.1033, 0.826229, 17.1159, 5.73307, 25.5276, 9.00431, 19.6082, 11.8861, 20.9323, 20.6094, 18.5957, 28.0086, 15.7918, 31.5914, 12.91, 28.6317, 11.1965, 22.4787, 13.2994, 10.7178, 13.3773, 10.2505 )
+
+[sub_resource type="ConvexPolygonShape2D" id=62]
+points = PoolVector2Array( 8.47047, 8.5577, 12.3648, 7.9346, 16.8822, 0.691158, 17.9726, 6.06533, 24.5151, 9.1029, 19.2188, 11.751, 18.0505, 17.3589, 21.867, 20.3965, 22.0227, 27.6399, 15.7139, 31.5342, 10.4176, 26.7831, 9.95031, 19.6176, 12.9879, 17.1252, 12.8321, 14.9444 )
+
+[sub_resource type="ConvexPolygonShape2D" id=63]
+points = PoolVector2Array( 18.3507, 6.8442, 23.8806, 9.18079, 20.3757, 9.25868, 19.6748, 12.9193, 17.5718, 15.9569, 22.1671, 19.3839, 21.1546, 27.4062, 15.5468, 31.69, 9.47163, 27.6399, 9.47163, 21.8763, 12.2755, 19.0724, 12.1198, 12.2184, 7.9139, 9.02502, 12.3534, 7.85672, 15.5468, 1.15848, 15.5468, 0.301723 )
 
 [sub_resource type="TileSet" id=44]
 0/name = "cars.png 0"
@@ -1335,6 +1352,111 @@ points = PoolVector2Array( 0, 0, 19, 0, 19, 38, 0, 38 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
+6/name = "auto and scooty.png 6"
+6/texture = ExtResource( 37 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 60 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 60 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "auto and scooty.png 7"
+7/texture = ExtResource( 37 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 32, 0, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 61 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 61 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "auto and scooty.png 8"
+8/texture = ExtResource( 37 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 32, 32, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 62 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 62 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
+9/name = "auto and scooty.png 9"
+9/texture = ExtResource( 37 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 32, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 63 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 63 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "auto and scooty.png 10"
+10/texture = ExtResource( 37 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 64, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 59 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 59 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=27]
 points = PoolVector2Array( 29.8919, 46.3826, 28.4383, 53.6503, 22.7856, 61.7256, 8.73464, 61.5641, 2.92044, 51.7122, 3.08195, 47.3516 )
@@ -1837,6 +1959,33 @@ height = 30.0
 flags = 4
 load_path = "res://.import/object or char shadow.png-9ff6c3d215ac3114be2f24c65823f435.stex"
 
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 36 )
+region = Rect2( 0, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 36 )
+region = Rect2( 96, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 36 )
+region = Rect2( 192, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 36 )
+region = Rect2( 288, 0, 96, 96 )
+
+[sub_resource type="SpriteFrames" id=69]
+animations = [ {
+"frames": [ SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 1.0
+} ]
+
 [node name="Level1" type="Node2D"]
 position = Vector2( 0, -1 )
 script = ExtResource( 25 )
@@ -2216,7 +2365,7 @@ scale = Vector2( 5, 5 )
 tile_set = SubResource( 44 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 131064, 1073741824, 0, 131065, 1073741826, 0, 131066, 1073741829, 0, 131067, 3, 0, 131068, 4, 0, 131070, 5, 0, 458742, 1, 0, 458746, 0, 0 )
+tile_data = PoolIntArray( 131064, 1073741824, 0, 131065, 1073741826, 0, 131066, 1073741830, 0, 131067, 3, 0, 131068, 4, 0, 131069, 1073741831, 0, 131070, 1073741832, 0, 458742, 1, 0, 458743, 6, 0, 458744, 9, 0, 458746, 0, 0 )
 
 [node name="TileMap4" type="TileMap" parent="."]
 scale = Vector2( 2, 2 )
@@ -2248,10 +2397,6 @@ new_scene = "res://Levels/Level2.tscn"
 position = Vector2( 200, 1664 )
 shape = SubResource( 43 )
 
-[node name="Cat" parent="." instance=ExtResource( 30 )]
-position = Vector2( 1984, 872 )
-scale = Vector2( 6, 6 )
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 32 )
 volume_db = -23.636
@@ -2266,7 +2411,7 @@ script = ExtResource( 35 )
 position = Vector2( 1.52588e-05, -1 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 56 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -2279,3 +2424,17 @@ scale = Vector2( 3.37256, 2.93994 )
 texture = SubResource( 58 )
 offset = Vector2( 5, 10 )
 flip_h = true
+
+[node name="Cat" parent="." instance=ExtResource( 30 )]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cat"]
+position = Vector2( 0, -4 )
+shape = SubResource( 64 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Cat"]
+position = Vector2( 2184.5, 824.5 )
+scale = Vector2( 0.760417, 0.760417 )
+frames = SubResource( 69 )
+animation = "New Anim"
+frame = 1
+playing = true

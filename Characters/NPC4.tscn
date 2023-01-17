@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/npc 4.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 25.5 )
+extents = Vector2( 10, 7.5 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "NPC_Expression"
@@ -183,7 +183,7 @@ texture = ExtResource( 1 )
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 8.5 )
+position = Vector2( 0, 26.5 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
